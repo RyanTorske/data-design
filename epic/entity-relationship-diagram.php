@@ -2,26 +2,30 @@
 <h1><strong>Profile</strong></h1>
 <ul>
 	<li>ProfileId(primary key)</li>
-	<li>profileUserName(primary key)</li>
-	<li>profileEmail(primary key)</li>
-	<li>profileInfo (primary Key)</li>
-	<li>profileDateJoined (primary key)</li>
+	<li>profileUserName</li>
+	<li>profileEmail</li>
+	<li>profileInfo</li>
+	<li>profileDateJoined</li>
 </ul>
 
 <h2><strong>Video</strong></h2>
 <ul>
 	<li>videoId(primary key)</li>
-	<li>videoLength(foreign key)</li>
-	<li>videoDate(foreign key)</li>
-	<li>videoViews(foreign key)</li>
-	<li>videoTags (foreign key)</li>
+	<li>videoProfileId(foreign key)</li>
+	<li>videoDate</li>
+	<li>videoViews</li>
+	<li>videoTags</li>
+	<li>videoDescription</li>
 </ul>
 
 <h3><strong>Comment</strong></h3>
 <ul>
-	<li>commentId(primary key)</li>
-	<li>commentDate(foreign key)</li>
-	<li>commentContent(foreign key)</li>
+	<li>commentProfileId(foreign key 1)</li>
+	<li>commentVideoId (foreign key 2)</li>
+	<li>commentDate</li>
+	<li>commentContent</li>
+	<li>commentAmount</li>
+	<li>commentReply</li>
 </ul>
 
 <h4>Relations</h4>
