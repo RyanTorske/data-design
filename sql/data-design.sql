@@ -1,8 +1,8 @@
-drop table if exists Comment;
-drop table if exists Video;
-drop table if exists Profile;
+drop table if exists comment;
+drop table if exists video;
+drop table if exists profile;
 
-create table Profile(
+create table profile(
     profileId binary(16) not null,
     profileEmail varchar(128) not null,
     profileDescription char(97) not null,
@@ -14,29 +14,24 @@ create table Profile(
     primary key(profileId)
 );
 
-create table Video(
+create table video(
     videoId binary(16) not null,
     videoProfileId binary(16) not null,
     videoDescription varchar(4000) not null,
     videoDate datetime(6) not null,
     index(videoProfileId),
-    foreign key(videoProfileId) references Profile(profileId),
+    foreign key(videoProfileId) references profile(profileId),
     primary key(videoId)
 );
 
-create table Comment(
+create table comment(
     commentProfileId binary(16) not null,
     commentVideoId binary(16)not null,
     commentDate datetime(6) not null,
     commentContent varchar(4000) not null,
     index(commentProfileId),
     index(commentVideoId),
-    foreign key(commentProfileId) references Profile(profileId),
-    foreign key(commentVideoId) references Video(videoId),
+    foreign key(commentProfileId) references profile(profileId),
+    foreign key(commentVideoId) references video(videoId),
     primary key(commentProfileId, commentVideoId)
 );
-
-
-
-INSERT INTO Profile(profileId, profileEmail, profileDescription, profileUsername, profileDateJoined) VALUES
-
