@@ -1,10 +1,10 @@
 <Title>Entities & Attributes</Title>
 <h1><strong>Profile</strong></h1>
 <ul>
-	<li>ProfileId(primary key)</li>
+	<li>profileId(primary key)</li>
 	<li>profileUserName</li>
 	<li>profileEmail</li>
-	<li>profileInfo</li>
+	<li>profileDescription</li>
 	<li>profileDateJoined</li>
 </ul>
 
@@ -13,8 +13,6 @@
 	<li>videoId(primary key)</li>
 	<li>videoProfileId(foreign key)</li>
 	<li>videoDate</li>
-	<li>videoViews</li>
-	<li>videoTags</li>
 	<li>videoDescription</li>
 </ul>
 
@@ -24,8 +22,6 @@
 	<li>commentVideoId (foreign key 2)</li>
 	<li>commentDate</li>
 	<li>commentContent</li>
-	<li>commentAmount</li>
-	<li>commentReply</li>
 </ul>
 
 <h4>Relations</h4>
@@ -39,4 +35,4 @@
 <p><a href="use-case-interaction.php">Use Case Interaction</a></p>
 <p><a href="user-story.php">User Story</a></p>
 <p><a href="entity-relationship-diagram.php">ERD Diagram</a></p>
-<p><a href="ERD%20Final.png">ERD Flowchart</a></p>
+<p><a href="ERD%20Data%20Design%20Diagram%20Final.png">ERD Flowchart</a></p>
