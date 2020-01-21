@@ -38,4 +38,5 @@ create table Comment(
 
 
 
-INSERT INTO Profile(profileId, profileEmail, profileDescription, profileUsername, profileDateJoined);
+INSERT INTO Profile(profileId, profileEmail, profileDescription, profileUsername, profileDateJoined) VALUES
+
